@@ -1,6 +1,6 @@
-import cardapio from './itens.json'
+import cardapio from 'data/cardapio.json';
 import Item from './Item';
-import styles from './Itens.module.scss'
+import styles from './Itens.module.scss';
 import { useEffect, useState } from 'react';
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 
 export default function Itens(props: Props) {
 
-    const [lista, setLista] = useState(cardapio)
+    const [lista, setLista] = useState(cardapio);
     const {busca, filtro, ordenador} = props;
 
     function testaBusca(title: string) {
@@ -27,14 +27,14 @@ export default function Itens(props: Props) {
     function ordenar(lista: typeof cardapio) {
         
         switch(ordenador) {
-            case 'porcao':
-                return lista.sort((a, b) => a.size > b.size ? 1 : -1);
-            case 'qtd_pessoas':
-                return lista.sort((a, b) => a.serving > b.serving ? 1 : -1);
-            case 'preco':
-                return lista.sort((a, b) => a.price > b.price ? 1 : -1);
-            default:
-                return lista;
+        case 'porcao':
+            return lista.sort((a, b) => a.size > b.size ? 1 : -1);
+        case 'qtd_pessoas':
+            return lista.sort((a, b) => a.serving > b.serving ? 1 : -1);
+        case 'preco':
+            return lista.sort((a, b) => a.price > b.price ? 1 : -1);
+        default:
+            return lista;
         }
 
     }
@@ -50,10 +50,10 @@ export default function Itens(props: Props) {
 
     return (
         <div className={styles.itens}>
-             {lista.map(item => (
+            {lista.map(item => (
                 <Item key={item.id} {...item} />
             ))}
         </div>
-    )
+    );
 
 }

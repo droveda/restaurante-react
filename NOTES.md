@@ -60,3 +60,24 @@
   * para importar: **import classNames from 'classnames';**
   * ajuda a criar o nome de classes (nao precisa ficar fazendo concatenacoes confusas para montar nomes de classes css dinamicamente)
   * Exemplo: /src/pages/Cardapio/Filtros/index.tsx
+
+
+## ESLint (Ferramenta de auxilio para estilo de código. Exemplo: utilizar aspas simples, ter ponto e virgual, identação, etc...)
+* o que é?
+  * O ESLint é uma ferramenta que analisa o código e aponta quaisquer problemas que encontrar. Ele pode encontrar bugs, áreas potencialmente problemáticas, estilos de codificação ruins e questões de estilo.
+  * Ou seja, ele irá nos auxiliar durante a codificação a encontrar erros de escrita ou outros problemas, podemos também o utilizar para manter um estilo de código. E temos esse auxílio direto no editor de código que utilizamos ou no terminal.
+* para installar: **npm init @eslint/config** (ira fazer algumas perguntas, ir respondendo)
+* adicionar  **"react/react-in-jsx-scope": "off",** dentro de rules no arquivo **.eslintrc.json**
+* executar: **npx eslint ./src --fix** assim irá resolver os problemas e manter um padrao de código
+
+
+## react-router-dom
+* para instalar: **npm install react-router-dom**
+* para usar:
+  * criado arquivo: routes.js, ver ele para exemplo
+  * utilizado as rotas no index.tsx raiz: /src/index.tsx
+  * tocar a tag 'a' (href) pelo: **import { Link } from 'react-router-dom';**
+    * ver exemplo em: /src/components/Menu/index.tsx 
+
+
+## Extensao chrome React Developer Tools
