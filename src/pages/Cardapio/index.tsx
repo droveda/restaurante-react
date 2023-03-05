@@ -40,7 +40,7 @@ export default function Cardapio() {
                     />
                 </div>
 
-                <Itens />
+                <Itens busca={busca} filtro={filtro} ordenador={ordenador} />
 
             </section>
         </main>
